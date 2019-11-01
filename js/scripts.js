@@ -24,13 +24,12 @@ function beepBoop(input) {
 function playVideo() {
   var video = document.getElementByID("answerVideo")
   var videoBtn = document.getElementByID("videoBtn")
-  if (video.paused) {
-    video.play();
-    videoBtn.innerHTML = "Pause"
-  } else {
-    video.pause();
-    videoBtn.innerHTML = "Play"
-  }
+  video.muted(true);
+  videoBtn.addEventListener("click", function() {
+    video.muted(false);
+  })
+
+
 }
 // var video = getElementByID("answerVideo");
 // function video() {
