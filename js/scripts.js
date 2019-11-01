@@ -16,13 +16,9 @@ function beepBoop(input) {
       outputArray.push("Beep!")
     } else {
       outputArray.push(inputString)
-
     }
-
   }
   console.log(outputArray);
-
-
 } //END OF FUNCTION!!!
 
 // for (var i in wordArray)
@@ -33,6 +29,8 @@ function beepBoop(input) {
   beepBoop(input)
   // User Logic
   $(document).ready(function() {
+    $("form#input").submit(function(event) {
+      event.preventDefault();
+    })
 
-  })
-  ;
+  });
