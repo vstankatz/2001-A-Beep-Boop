@@ -1,0 +1,23 @@
+#answer {
+  margin-left: 20px;
+  margin-right: 200px;
+}
+#answerVideo {
+  position: fixed;
+  width: 500px;
+  height: auto;
+
+}
+
+#question {
+  display: none;
+}
+
+#answer {
+  display:
+
+}
+
+body {
+  color: red;
+}

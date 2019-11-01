@@ -21,42 +21,57 @@ function beepBoop(input) {
   console.log(outputArray);
 } //END OF FUNCTION!!!
 
-function onYouTubeIframeAPIReady() {
-  var player;
-  player = new YT.Player("YouTubeBackgroundVideoPlayer", {
-    videoId: '{e-QFj59PON4}',
-    width: auto,
-    height: auto,
-    playerVars: {
-      playlist: '{e-QFj59PON4}',
-        autoplay: 1,
-        showinfo: 0,
-        modestbranding: 1,
-        loop: 1,
-        rel:0,
-        enablejsapi:1,
-
-    },
-    events: {
-      onReady: function(video) {
-        video.target.mute();
-        vido.target.setPlaybackQuality('hd180');
-      },
-      onStateChange: function(video) {
-        if (video && video.data === 1) {
-          var videoHolder =
-          document.getElementByID("player")
-          if (videoHolder && videoHolder.id) {
-            videoHolder.classList.remove("LOADING PLACEHOLDER");
-          }
-        } else if (video && video.data === 0) {
-          video.target.playVIdeo()
-        }
-      }
-    }
-  });
+function playVideo() {
+  var video = document.getElementByID("answerVideo")
+  var videoBtn = document.getElementByID("videoBtn")
+  if (video.paused) {
+    video.play();
+    videoBtn.innerHTML = "Pause"
+  } else {
+    video.pause();
+    videoBtn.innerHTML = "Play"
+  }
 }
-  onYouTubeIframeAPIReady()
+// var video = getElementByID("answerVideo");
+// function video() {
+//
+// }
+// function onYouTubeIframeAPIReady() {
+//   var player;
+//   player = new YT.Player("YouTubeBackgroundVideoPlayer", {
+//     videoId: '{e-QFj59PON4}',
+//     width: auto,
+//     height: auto,
+//     playerVars: {
+//       playlist: '{e-QFj59PON4}',
+//         autoplay: 1,
+//         showinfo: 0,
+//         modestbranding: 1,
+//         loop: 1,
+//         rel:0,
+//         enablejsapi:1,
+//
+//     },
+//     events: {
+//       onReady: function(video) {
+//         video.target.mute();
+//         vido.target.setPlaybackQuality('hd180');
+//       },
+//       onStateChange: function(video) {
+//         if (video && video.data === 1) {
+//           var videoHolder =
+//           document.getElementByID("player")
+//           if (videoHolder && videoHolder.id) {
+//             videoHolder.classList.remove("LOADING PLACEHOLDER");
+//           }
+//         } else if (video && video.data === 0) {
+//           video.target.playVIdeo()
+//         }
+//       }
+//     }
+//   });
+// }
+//   onYouTubeIframeAPIReady()
   beepBoop(input)
   // User Logic
   $(document).ready(function() {
