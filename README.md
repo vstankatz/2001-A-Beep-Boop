@@ -17,7 +17,7 @@ _This program was designed to count up to a users given input while replacing di
 
 ## Setup-Installation Requirements
 
-* _Go to gh-pages link_
+* _https://vstankatz.github.io/2001-A-Beep-Boop/_
 * _Put a positive number into the given input._
 * _Hit the submit button to see your results, if unsatisfied use the back button to return._
 
