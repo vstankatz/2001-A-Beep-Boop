@@ -2,11 +2,9 @@
 var outputArray = [];
 
 function beepBoop(input) {
-  console.log(input);
-
   if (input >= 0) {
     for (var i=0; i <= input; i++) {
-      var inputString = i.toString()
+      var inputString = i.toString();
       var inputArray = inputString.split("");
 
       if (inputArray.includes("3")) {
@@ -21,41 +19,38 @@ function beepBoop(input) {
     }
     $("#question").hide();
     $("#answer").show();
+    $("#videoContent").hide();
+    $("#playVideo").show();
   } else {
     alert("Please enter a positive number.");
   }
-
-
-
-
-
-  console.log(outputArray);
 } //END OF FUNCTION!!!
-
 $(document).ready(function() {
   $("#answer").hide();
   var backBtn = document.getElementById("backBtn");
+  var video = document.getElementById("answerVideo")
   backBtn.onclick = function() {
     $("#question").show();
     $("#answer").hide();
     document.getElementById("input").reset();
     outputArray.length = 0;
+    video.currentTime = 0;
+    video.pause();
+
   }
 
-
-
+var play = document.getElementById("answer");
+answer.onclick = function () {
+  $("#videoContent").fadeIn();
+  $("#playVideo").hide();
+}
 
   // User Logic
-
-
-    $("form#input").submit(function(event) {
-      event.preventDefault();
-      var input = $("input#inputNumber").val();
-      beepBoop(input)
-      $("#inputValue").text(input);
-      $("#output").text(outputArray.join(""));
-
-
-    })
-
-  });
+  $("form#input").submit(function(event) {
+    event.preventDefault();
+    var input = $("input#inputNumber").val();
+    beepBoop(input)
+    $("#inputValue").text(input);
+    $("#output").text(outputArray.join(""));
+  })
+});

@@ -32,25 +32,34 @@
   background-color: black;
 }
 
+#playVideo {
+  display: center;
+  z-index: 1;
+  margin-top: 30%;
+  color: white;
+  font-size: 23px;
+}
 #answerVideo {
   position: fixed;
   min-width: 100%;
   min-height: auto;
   top: 0;
+  background: black;
 }
 
-.videoContent {
+#videoContent {
   display: block;
   background: rgba(0, 0, 0, 0.5);
   color: #f1f1f1;
   top:50px;
   z-index: 1;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 60px;
+  padding-right: 60px;
   margin: auto;
   text-align: center;
   overflow: hidden;
   opacity: 0.4;
+  font-size: 18px;
 }
 
 
