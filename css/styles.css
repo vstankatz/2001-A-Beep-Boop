@@ -5,16 +5,17 @@
 }
 
 .button img {
-  width: 100%;
+  width: 50%;
   height: auto;
+  border-radius: 50%;
 }
 
 .button .btn {
   position: absolute;
-  width: 100%;
+  width: 50%;
   height: 100%;
   top: 0;
-  left: 0;
+  left: 25%;
   background: none;
   color: white;
   font-weight: bold;
@@ -79,4 +80,22 @@ body {
   background-image: url("img/sky.jpg");
   background-size: 100%;
   height: auto;
+}
+
+@media only screen and (max-width: 756px) {
+
+  .button .btn {
+    font-size: 14px;
+  }
+
+}
+@media only screen and (max-width: 560px) {
+
+  .button .btn {
+    font-size: 13px;
+  }
+  #videoContent {
+    font-size: 14px;
+  }
+
 }
