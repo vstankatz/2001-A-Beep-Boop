@@ -1,3 +1,28 @@
+.button {
+  position: relative;
+  width: 30%;
+  left: 35%;
+}
+
+.button img {
+  width: 100%;
+  height: auto;
+
+}
+
+.button .btn {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: none;
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+
 #answer {
   display: flex;
   justify-content: center;
@@ -37,4 +62,7 @@
 body {
   color: darkblue;
   text-align: center;
+  background-image: url("img/sky.jpg");
+  background-size: 100%;
+  height: auto;
 }
