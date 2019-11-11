@@ -1,7 +1,6 @@
 // Business Logic
-var outputArray = [];
-
 function beepBoop(input) {
+   this.outputArray = [];
   if (input >= 0) {
     for (var i=0; i <= input; i++) {
       var inputString = i.toString();
@@ -17,14 +16,20 @@ function beepBoop(input) {
         outputArray.push(inputString + ", ")
       }
     }
-    $("#question").hide();
-    $("#answer").show();
-    $("#videoContent").hide();
-    $("#playVideo").show();
+    next();
   } else {
     alert("Please enter a positive number.");
   }
 } //END OF FUNCTION!!!
+
+function next() {
+  $("#question").hide();
+  $("#answer").show();
+  $("#videoContent").hide();
+  $("#playVideo").show();
+};
+
+  // User Logic
 $(document).ready(function() {
   $("#answer").hide();
   var backBtn = document.getElementById("backBtn");
@@ -45,12 +50,12 @@ answer.onclick = function () {
   $("#playVideo").hide();
 }
 
-  // User Logic
+
   $("form#input").submit(function(event) {
     event.preventDefault();
     var input = $("input#inputNumber").val();
     beepBoop(input)
     $("#inputValue").text(input);
-    $("#output").text(outputArray.join(""));
+    $("#output").text(outputArray);
   })
 });

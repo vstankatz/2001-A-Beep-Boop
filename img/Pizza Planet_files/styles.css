@@ -1,0 +1,22 @@
+#veganNote {
+  font-size: 6px;
+  font-style: italic;
+  line-height: 1.1em;
+}
+
+.currentOrders {
+  overflow: scroll;
+  max-height: 70%;
+}
+
+.pizzaDetails {
+  display: none;
+}
+
+#priceSubtotal {
+  list-style-type: none;
+}
+
+.checkout {
+  display: none;
+}
